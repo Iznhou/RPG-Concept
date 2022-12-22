@@ -22,7 +22,8 @@ class EnemyCreator
 		int setCharacterLevel(int lvl);*/
 
 		void enemyGenerate();
-
+		
+		//Destructor
 		~EnemyCreator();
 };
 
