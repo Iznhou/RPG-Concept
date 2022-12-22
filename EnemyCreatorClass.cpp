@@ -5,10 +5,12 @@
 #include <vector>
 #include <ctime>
 
+//Include Header file
 #include "EnemyCreatorHeader.h"
 
 using namespace std;
 
+//Constructor to create Enemey Character
 EnemyCreator::EnemyCreator(string name, int lvl, int enemyID)
 {
 	enemyName = name;
@@ -17,8 +19,10 @@ EnemyCreator::EnemyCreator(string name, int lvl, int enemyID)
 	level = lvl;
 }
 
+//Generate and display enemy by taking inputed name and chosen weapon and assigning enemy class based on weapon
 void EnemyCreator::enemyGenerate()
 {
+	//Random Class object to randomize level; currently not used
 	srand(time(0));
 
 	cout << "**********************" << endl;
@@ -79,6 +83,7 @@ void EnemyCreator::enemyGenerate()
 	cout << "\n**********************\n" << endl;
 }
 
+//Destructor
 EnemyCreator::~EnemyCreator() 
 {
 	cout << "\a" << endl;
