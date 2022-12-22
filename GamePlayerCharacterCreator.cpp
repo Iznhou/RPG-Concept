@@ -1,6 +1,7 @@
 // GamePlayerCharacterCreator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -8,7 +9,6 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
-#include <map>
 #include <filesystem>
 
 #include "GameCharacterCreatorHeader.h"
@@ -37,9 +37,9 @@ int main()
     char userInput;
     char weaponChangeInput;
 
-    //int compareNum;
-    //int levelRandomizer;
-    //int randResult;
+    /*int compareNum;
+    int levelRandomizer;
+    int randResult;*/
 
     vector<string> weapons;
     
@@ -48,13 +48,18 @@ int main()
     ofstream playerCharacterFileOUT;
     ofstream playerCharacterMetaFileOUT;
 
+    //Give player option to create a character or upload a created one.
     cout << "Create a character (c) or upload a character (u): ";
     cin >> userInput;
 
+    //If player chooses to create a character
     if (userInput == 'c')
     {
+        //Create and open text file for Character Profile
         playerCharacterFileOUT.open("PlayerCharacterProfile.txt");
         
+        /*Open the Character Class Weapons text file 
+        and feed the file contents into the Weapons string vector */
         playerWeapons.open("CharacterWeapons.txt");
 
         while (playerWeapons >> fileContent)
@@ -62,6 +67,7 @@ int main()
             weapons.push_back(fileContent);
         }
 
+        //Display the vector and ask for player's input
         cout << "Select which weapon to use; Press Enter to begin: \n" << endl;
         cin.ignore().get();
 
@@ -80,17 +86,23 @@ int main()
         cout << "\n\n";
         cin >> weaponNum;
 
+        /*Call functionand take the user's choice as argument to determine class
+          and return class to variable*/
         classSelect = classSelector(weaponNum);
 
+        //Player enter's the character's name
         cout << "\nEnter character name: " << endl;
         cin >> playerName;
 
+        //Create object for the GameCharacterCreator Class and pass arguments to object
         GameCharacterCreator playerCharacter(playerName, classSelect, weaponNum, 50, 50);
 
+        //Call Class functions to create character, choose race, and weapon
         playerCharacter.generate();
         playerCharacter.generateRace();
         playerCharacter.generateWeapons();
         
+        //Give player option to equip armor, headgear, leg gear, and tatoo
         cout << "\nEquip Torso Armor? Y/N" << endl;
         cin >> userInput;
 
@@ -115,6 +127,8 @@ int main()
             playerCharacter.generateLegArmor();
         }
 
+        /*If the selected character weapon isn't 1 (meaning Gauntlets), 
+        give player option to equip bracer*/
         if (weaponNum != 1)
         {
             cout << "\nEquip Bracer? Y/N" << endl;
@@ -126,6 +140,8 @@ int main()
             }
         }
         
+        /*If the character weapon is Gauntlets, 
+        omit ability to select Bracerand set the Arm Type to Gauntlets*/
         else
         {
             playerCharacter.setArmType("Gauntlets");
@@ -138,6 +154,10 @@ int main()
         {
             playerCharacter.generateSigil();
         }
+
+        /*Output all character information to the player character profile text file
+          Including: Name, Level, Class, Job Level, Weapon, Armor, Bracer, leg armor archetypes, Race
+          Character stats, and currently equipped armor, tatoo, and weapons*/
 
         playerCharacterFileOUT << "Character Info: " << endl;
 
@@ -211,25 +231,33 @@ int main()
 
         cout << endl;
 
+        //Close text files
         playerCharacterFileOUT.close();
         playerWeapons.close();
 
+        //Give player the option to elevate to next class associated with their current class
         cout << "Change Class? N/Y" << endl;
         cin >> userInput;
 
         cout << endl;
 
+        /*If player wishes to elevate to next class, 
+        call class function to display next classes to elevate to.*/
         if (tolower(userInput) == 'y')
         {
             playerCharacter.characterClassChanger();
 
+            //Blade Dancer and Gladiator are a part of the Warrior class tree
             if (playerCharacter.getCharacterClass() == "BladeDancer")
             {
+                //Blade Dancer is a Dual-Wielder, automatically change weapons
                 cout << "\nChange Weapons: " << endl;
 
                 playerCharacter.generateWeapons();
             }
 
+            /*Changing to Gladiator changes weapon class to Spear from Sword
+            Automatically trigger weapon change*/
             else if (playerCharacter.getCharacterClass() == "Gladiator")
             {
                 cout << "\n Change Weapon Class to from Sword to Spear? Y/N" << endl;
@@ -242,6 +270,8 @@ int main()
                 }
             }
 
+            /*Shinobi elevates from Renegade and can continue to Dual-Wield Daggers
+            or switch to Solo-Wield with Fuma Shurikens*/
             if (playerCharacter.getCharacterClass() == "Shinobi")
             {
                 cout << "Change Weapon Class from Daggers to Fuma Shuriken? Y/N" << endl;
@@ -265,6 +295,8 @@ int main()
                 }
             }
             
+            /*Knight elevates from Guardian and give player option to change from a Sword and Shield to a GreatSword
+            And change weapons if chosen to do so*/
             if (playerCharacter.getCharacterClass() == "Knight" && playerCharacter.getCharacterWeapon() == "SwordAndShield")
             {
                 cout << "Change Weapon Class from SwordAndShield to GreatSword? Y / N" << endl;
@@ -277,6 +309,8 @@ int main()
                 }
             }
 
+            /*Knight elevates from Guardian and give player option to change from a GreatSword to Sword and Shield
+            And change weapons if chosen to do so*/
             else if (playerCharacter.getCharacterClass() == "Knight" && playerCharacter.getCharacterWeapon() == "GreatSword")
             {
                 cout << "Change Weapon Class from GreatSword to SwordAndShield? Y / N" << endl;
@@ -289,6 +323,8 @@ int main()
                 }
             }
 
+            /*Templar elevates from Guardian and give player option to change from a Sword and Shield to a GreatSword
+            And change weapons if chosen to do so*/
             if (playerCharacter.getCharacterClass() == "Templar" && playerCharacter.getCharacterWeapon() == "SwordAndShield")
             {
                 cout << "Change Weapon Class from SwordAndShield to GreatSword? Y / N" << endl;
@@ -301,6 +337,8 @@ int main()
                 }
             }
 
+            /*Templar elevates from Guardian and give player option to change from a GreatSword to Sword and Shield
+            And change weapons if chosen to do so*/
             else if (playerCharacter.getCharacterClass() == "Templar" && playerCharacter.getCharacterWeapon() == "GreatSword")
             {
                 cout << "Change Weapon Class from GreatSword to SwordAndShield? Y / N" << endl;
@@ -313,6 +351,8 @@ int main()
                 }
             }
 
+            /*ShotMeister elevates from Guardian and give player option to change from a CrossBow to Sword and Shield
+            And change weapons if chosen to do so*/
             if (playerCharacter.getCharacterClass() == "ShotMeister" && playerCharacter.getCharacterWeapon() == "CrossBow")
             {
                 cout << "Change Weapon Class from CrossBow to BowAndArrow? Y / N" << endl;
@@ -325,6 +365,8 @@ int main()
                 }
             }
 
+            /*ShotMeister elevates from Guardian and give player option to change from a Bow and Arrow to CrossBow
+            And change weapons if chosen to do so*/
             else if (playerCharacter.getCharacterClass() == "ShotMeister" && playerCharacter.getCharacterWeapon() == "BowAndArrow")
             {
                 cout << "Change Weapon Class from BowAndArrow to CrossBow? Y / N" << endl;
@@ -337,6 +379,8 @@ int main()
                 }
             }
 
+            /*BeastKaiser elevates from Hunter and give player option to change from a CrossBow to Sword and Shield
+            And change weapons if chosen to do so*/
             if (playerCharacter.getCharacterClass() == "BeastKaiser" && playerCharacter.getCharacterWeapon() == "CrossBow")
             {
                 cout << "Change Weapon Class from CrossBow to BowAndArrow? Y / N" << endl;
@@ -349,6 +393,8 @@ int main()
                 }
             }
 
+            /*BeastKaiser elevates from Hunter and give player option to change from a Bow and Arrow to CrossBow
+            And change weapons if chosen to do so*/
             else if (playerCharacter.getCharacterClass() == "BeastKaiser" && playerCharacter.getCharacterWeapon() == "BowAndArrow")
             {
                 cout << "Change Weapon Class from BowAndArrow to CrossBow? Y / N" << endl;
@@ -361,6 +407,8 @@ int main()
                 }
             }
 
+            /*If the chosen next class isn't any of the classes listed, 
+            simply give option to change weapons*/
             else if (playerCharacter.getCharacterClass() != "Shinobi" &&
                 playerCharacter.getCharacterClass() != "Knight" &&
                 playerCharacter.getCharacterClass() != "Templar" &&
@@ -378,6 +426,7 @@ int main()
                 }
             }
 
+            //Give option to change armor, Headgear, etc
             cout << "\nChange Torso Armor? Y/N" << endl;
             cin >> userInput;
 
@@ -418,6 +467,8 @@ int main()
                 playerCharacter.generateSigil();
             }
 
+            /*Delete original Player Character Profile text file and create new one
+              and output all character info into it*/
             remove("PlayerCharacterProfile.txt");
 
             playerCharacterFileOUT.open("PlayerCharacterProfile.txt");
@@ -540,6 +591,7 @@ int main()
            playerCharacterMetaFileOUT.close();
         }
 
+        //If player chooses to not elevate to next class, output all information to PC Metadata File
         else if (tolower(userInput) == 'n')
         {
             cout << "Character Created! " << endl;
@@ -586,6 +638,7 @@ int main()
             playerCharacterMetaFileOUT.close();
         }     
 
+        //Display class skills and also output to Profile text file
         if (playerCharacter.getPrevClass() == "Null")
         {
             playerCharacter.setClassSkills();
@@ -725,6 +778,7 @@ int main()
         }
     }
 
+    //If player chooses to upload created character, call function to upload from Metadata file
     else if (userInput == 'u')
     {
         characterUploader();
@@ -847,6 +901,7 @@ string classSelector(int wNum)
     characterClassFile.close();
 }
 
+//Function to upload created character with Metadata file
 void characterUploader()
 {
     string createdPlayerName;
@@ -891,10 +946,12 @@ void characterUploader()
     ifstream characterFirstBranch;
     ifstream characterSecondBranch;
 
+    //Open metadata file
     playerCharacterFileIN.open("PlayerCharacterMetaFile.txt");
     /*characterFirstBranch.open("PlayerCharacterClassFirstBranch.txt");
     characterSecondBranch.open("PlayerCharacterClassSecondBranch.txt");*/
 
+    //Feed all information from Metadata file into the appropriate variables in sequence
     while (playerCharacterFileIN >> createdPlayerName)
     {
         playerCharacterFileIN >> playerClass;
@@ -930,10 +987,12 @@ void characterUploader()
         playerCharacterFileIN >> signLevel;
     }
 
+    //Create class object to upload character with all required arguments
     GameCharacterCreator playerCharacter(createdPlayerName, playerClass, weaponType, aType, bType, legType, equippedMainWep, equippedOffWep, equippedArmor, 
         equippedHelm, equippedBracer, equippedLeg, equippedSign, race, raceType, charLvl, charJobLvl, charHP, charSP, charStr, charAgi, charVit, charInt, charDex,
         charLuk, armorLevel, headLevel, armLevel, legLevel, firstWepLevel, secondWepLevel, signLevel);
 
+    //Display
     cout << "\n******************************" << endl;
     cout << "Name: " << playerCharacter.getName() << endl;
     cout << "Level: " << playerCharacter.getLevel() << endl;
@@ -1037,8 +1096,10 @@ void characterUploader()
 
     cout << "\n**********************\n" << endl;*/
 
+    //Close file
     playerCharacterFileIN.close();
 
+    //Display skills
     if (playerCharacter.getPrevClass() == "Null")
     {
         playerCharacter.setClassSkills();
