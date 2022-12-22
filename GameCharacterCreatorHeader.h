@@ -1,11 +1,13 @@
 #pragma once
 
+//Class Header File
 #include<string>
 
 using namespace std;
 
 class GameCharacterCreator
 {
+	//Private variables
 	private:
 		string characterName;
 		string characterWeapon;
@@ -60,6 +62,7 @@ class GameCharacterCreator
 
 		int weaponID;
 
+		//Constructors and all public functions
 	public:
 		GameCharacterCreator(string name, string selectedClass, int wID, double lvl, double jLvl);
 		GameCharacterCreator();
@@ -178,5 +181,6 @@ class GameCharacterCreator
 
 		void characterClassChanger();
 
+		//Destructor
 		~GameCharacterCreator();
 };
