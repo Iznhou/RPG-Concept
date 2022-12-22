@@ -9,12 +9,14 @@
 #include <unordered_map>
 #include <iomanip>
 
+//Include needed header file
 #include "GameCharacterCreatorHeader.h"
 
 using namespace std;
 
 char userInput;
 
+//Class constructor from character creation
 GameCharacterCreator::GameCharacterCreator(string name, string selectedClass, int wepID, double lvl, double jLvl)
 {
 	characterName = name;
@@ -47,6 +49,7 @@ GameCharacterCreator::GameCharacterCreator(string name, string selectedClass, in
 	sigilLvl = 0;
 }
 
+//Class constructor for character upload
 GameCharacterCreator::GameCharacterCreator(string name, string currentClass, string wepType, string torsoType, string bracerType, string legArmType, 
 	string equippedFWeapon, string equippedSWeapon, string equippedTorso, string equippedHead, string equippedBracer, string equippedLegArmor, string equippedInk,
 	string charRace, string rType, double lvl, double jLvl, double cHP, double cSP, double cStr, double cAgi, double cVit, double cInt, double cDex, double cLuk,
@@ -153,11 +156,13 @@ GameCharacterCreator::GameCharacterCreator(string name, string currentClass, str
 	}
 }
 
+//Default constructor
 GameCharacterCreator::GameCharacterCreator()
 {
 
 }
 
+//Take information from either used constructor to display character information
 void GameCharacterCreator::generate()
 {
 	cout << "\n**********************" << endl;
@@ -437,6 +442,15 @@ void GameCharacterCreator::generate()
 	cout << "\n**********************\n" << endl;
 }
 
+/*Generate weapons by opening the appropriate weapon text filesand feed them to dictionaries
+* 
+In the dictionaries, the key is the weapon and the value is the level; use an iterator to walk through them
+
+If the character can Dual-Wield and/or job level is high enough, allow them to choose a second weapon. 
+
+The first weapon goes into the right hand, second weapon goes into left hand
+
+Finally, set weapon information to appropriate class properties*/
 void GameCharacterCreator::generateWeapons()
 {
 	string weapon;
@@ -1904,6 +1918,11 @@ void GameCharacterCreator::generateWeapons()
 	}*/
 }
 
+/*Generate Torso Armor by opening the appropriate armor text filesand feed them to dictionaries
+*
+In the dictionaries, the key is the armor and the value is the level; use an iterator to walk through them
+
+Finally, set armor information to appropriate class properties*/
 void GameCharacterCreator::generateEquippedTorso()
 {
 	string armor;
@@ -2140,6 +2159,13 @@ void GameCharacterCreator::generateEquippedTorso()
 	}
 }
 
+/*Generate Head Armor by opening the appropriate head armor text filesand feed them to dictionaries
+*
+In the dictionaries, the key is the head armor and the value is the level; use an iterator to walk through them
+
+Finally, set armor information to appropriate class properties.
+
+Same applies to ArmBracer and Leg Armor and Sigil*/
 void GameCharacterCreator::generateHeadGear()
 {
 	string headGear;
@@ -3013,9 +3039,13 @@ void GameCharacterCreator::generateSigil()
 		exit(0);
 	}
 
+	//Close file
 	esigil.close();
 }
 
+/*Generate character race by opening characte race text file 
+and feed the contents into string vector. 
+Then assign each race a number for the player to choose*/
 void GameCharacterCreator::generateRace()
 {
 	int userRace;
@@ -3056,6 +3086,7 @@ void GameCharacterCreator::generateRace()
 
 	cin >> userRace;
 
+	//Assign race to character depending on the number
 	if (userRace == 0)
 	{
 		setCharacterRace(characterRaces[0]);
@@ -3086,6 +3117,8 @@ void GameCharacterCreator::generateRace()
 		setCharacterRace(characterRaces[5]);
 	}
 
+	/*If the chosen character race is Feral, 
+	player enters another number to determine what type of Feral*/
 	else if (userRace == 6)
 	{
 		setCharacterRace(characterRaces[6]);
@@ -3139,6 +3172,7 @@ void GameCharacterCreator::generateRace()
 		}
 	}
 
+	//Close file
 	playerRace.close();
 }
 
@@ -3516,6 +3550,8 @@ void GameCharacterCreator::setCharacterLuk(double Luk)
 	characterLuk = Luk;
 }
 
+/*Assign each class their skills by opening the appropriate class skill text file
+And feed them into an array and display them*/
 void GameCharacterCreator::setClassSkills()
 {
 	string skill;
@@ -3870,6 +3906,7 @@ void GameCharacterCreator::setClassSkills()
 	}
 }
 
+/*Take character skill array and append them to Player Character Profile text file*/
 void GameCharacterCreator::getClassSkills()
 {
 	fstream skills;
@@ -3927,6 +3964,8 @@ void GameCharacterCreator::getClassSkills()
 	skills.close();
 }
 
+/*Assign each elevated class their skills by opening the appropriate class skill text file
+And feed them into an array and display them*/
 void GameCharacterCreator::setSecondClassSkills()
 {
 	string skill;
@@ -4625,6 +4664,7 @@ void GameCharacterCreator::setSecondClassSkills()
 	}
 }
 
+/*Take character skill array and append them to Player Character Profile text file*/
 void GameCharacterCreator::getSecondClassSkills()
 {
 	fstream skills;
@@ -5104,6 +5144,9 @@ void GameCharacterCreator::getSecondClassSkills()
 	skills.close();
 }
 
+/*Class Function to allow for Class Evolution; 
+Open text files for both Class Branches and feed them into string vectors
+Assign each a number and display for player to choose from*/
 void GameCharacterCreator::characterClassChanger()
 {
 	string classFirstBranch;
