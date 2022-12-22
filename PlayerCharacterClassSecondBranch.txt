@@ -1,0 +1,11 @@
+BladeDancer
+Engineer
+Dominator
+Mercenary
+Rebel
+Templar
+Occulter
+Savager
+ShotMeister
+Shaman
+Executioner

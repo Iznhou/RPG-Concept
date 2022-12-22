@@ -1,0 +1,6 @@
+RipArmor
+RipWeapon
+BladeShuffle
+ZeroParadise
+ThornDrop
+BlackOut

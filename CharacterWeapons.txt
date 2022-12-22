@@ -1,0 +1,12 @@
+Sword
+Gauntlets
+Guns
+Daggers
+SwordAndShield
+GreatSword
+Bracelet
+Axes
+BowAndArrow
+CrossBow
+Magic
+Claws

@@ -1,0 +1,11 @@
+Gladiator
+Alchemist
+Monk
+Desperado
+Shinobi
+Knight
+Sorcerer
+Raider
+BeastKaiser
+SoulWielder
+ShadowWalker

@@ -1,0 +1,6 @@
+IronBody
+WeaponCatch
+RelaxBlow
+GunKnuckle
+LionBlow
+Generate

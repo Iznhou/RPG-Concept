@@ -1,0 +1,7 @@
+IronMaximize
+WeaponForge
+Repair
+SentinelSynthesis
+BurnTemper
+AvariceTerminate
+CyberCrash

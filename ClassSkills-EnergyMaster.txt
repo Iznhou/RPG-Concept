@@ -1,0 +1,8 @@
+EnergyBlast
+Teleport
+PyroShot
+AquaStrike
+LightningRage
+ShadowNapalm
+NecroBolt
+SpellCoat

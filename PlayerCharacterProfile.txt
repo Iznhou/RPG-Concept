@@ -1,0 +1,138 @@
+Character Info: 
+
+**********************
+Name: Keyaki
+Level: 50
+Class: Gladiator
+Job Level: 1
+
+Character Weapon: 
+
+Spear
+
+Armor Type: 
+
+LightArmor
+
+Bracer Type: 
+
+Bracer
+
+LegArmor Type: 
+
+Boots
+
+Ancestry: 
+
+Human
+
+**********************
+
+Character Stats: 
+
+**********************
+HP: 191
+SP: 372
+Strength: 466.5
+Agility: 295
+Vitality: 240
+Dexterity: 276
+Intelligence: 134
+Luck: 197
+
+**********************
+Character Equipment: 
+
+**********************
+
+Equipped Weapon: Gungnir
+
+Equipped Weapon Level: 35
+
+Equipped Second Weapon: Gungnir
+
+Equipped Second Weapon Level: 35
+
+Equipped Armor: empty
+
+Equipped Armor Level: 0
+
+Equipped Helm: empty
+
+Equipped Helm Level: 0
+
+Equipped Bracer: empty
+
+Equipped Bracer Level: 0
+
+Equipped Leg Armor: empty
+
+Equipped Leg Armor Level: 0
+
+Equipped Sign: empty
+
+Equipped Sign Level: 0
+
+**********************
+
+Character Body: 
+
+**********************
+
+
+Equipped Right Weapon Arm: Gungnir
+
+Equipped Left Weapon Arm: Gungnir
+
+Equipped Torso Armor: empty
+
+Equipped HeadGear: empty
+
+Equipped Leg Armor: empty
+
+Equipped Sign: empty
+
+Equipped Bracer:  empty
+
+**********************
+
+Available Skills for: Warrior
+
+**********************
+
+FieryFervor BulkUp PowerSlash 
+
+PummelBash VulcanDrive MagnumThrust 
+
+**********************
+
+Available Skills for: Gladiator
+
+**********************
+
+SkySlash SpiralSaber PowerGuard Revolver 
+
+OmniBreak Invigorate HateBuster 
+
+**********************
+
+Available Skills for: Warrior
+
+**********************
+
+FieryFervor BulkUp PowerSlash 
+
+PummelBash VulcanDrive MagnumThrust 
+
+**********************
+
+Available Skills for: Gladiator
+
+**********************
+
+SkySlash SpiralSaber PowerGuard Revolver 
+
+OmniBreak Invigorate HateBuster 
+
+**********************
+

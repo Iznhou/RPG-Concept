@@ -1,0 +1,6 @@
+FocusEye
+BackStrafe
+DoubleArrow
+BluntPoint
+ShadeArrow
+SpreadShot

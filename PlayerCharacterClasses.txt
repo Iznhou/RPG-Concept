@@ -1,0 +1,11 @@
+Warrior
+Artisan
+Breaker
+BulletShark
+Renegade
+Guardian
+EnergyMaster
+Ravager
+Hunter
+Sage
+Assassin

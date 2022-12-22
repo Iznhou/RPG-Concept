@@ -1,0 +1,6 @@
+ShieldCharge
+GuardUp
+AegisBommerang
+HaymakerSwing
+ValorStrike
+Breakthrough!

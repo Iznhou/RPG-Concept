@@ -1,0 +1,7 @@
+SpikeRain
+BlazeShot
+HydroBarrage
+ThunderEcstasy
+DesertFire
+CycloneTarget
+DeadEye

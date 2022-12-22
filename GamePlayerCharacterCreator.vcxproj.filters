@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GamePlayerCharacterCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyCreatorClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCharacterClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EnemyCreatorHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCharacterCreatorHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="PlayerCharacterClasses.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CharacterWeapons.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Swords.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Daggers.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-EnergyMaster.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Guns.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Gauntlets.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Shields.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-GreatSwords.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Bows.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Claws.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Staves.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Axes.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="PlayerCharacterClassFirstBranch.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="PlayerCharacterClassSecondBranch.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-CrossBows.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Warrior.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Renegade.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-BulletShark.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Assassin.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Hunter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-EnergyMaster.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Breaker.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Guardian.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Ravager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Sage.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Artisan.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassArmor-WarArtBrkerBSH.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassArmor-EMSage.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassArmor-AssassinRenegade.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassArmor-Ravager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassArmor-Guardian.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-Breaker.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-AssassinRenegade.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-Ravager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-Guardian.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-WarArtBS.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-Hunter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassHeadGear-EMSage.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CharacterSigil.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-AssassinRenegade.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-EMSage.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-Guardian.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-Ravager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-Hunter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassBracers-WarArtBS.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassLegArmor-WarArtBSHEMSage.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassLegArmor-Ravager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassLegArmor-Guardian.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassLegArmor-AssassinRenegade.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="CharacterRaces.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Gladiator.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Spears.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Alchemist.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-BladeDancer.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Engineer.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Monk.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Dominator.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Desperado.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Mercenary.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Shinobi.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Rebel.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassWeapons-Shuriken.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Savager.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Raider.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-ShadowWalker.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Executioner.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Shaman.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-SoulWielder.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-BeastKaiser.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-ShotMeister.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Knight.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Templar.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Sorcerer.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="ClassSkills-Occulter.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
