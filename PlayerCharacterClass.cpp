@@ -16,7 +16,7 @@ using namespace std;
 
 char userInput;
 
-//Class constructor from character creation
+//Class constructor from character creation; Initalize Private Variables upon invoking
 GameCharacterCreator::GameCharacterCreator(string name, string selectedClass, int wepID, double lvl, double jLvl)
 {
 	characterName = name;
